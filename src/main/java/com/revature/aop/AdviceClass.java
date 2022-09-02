@@ -6,26 +6,26 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-public class AspectClass {
+public class AdviceClass {
     @Before("execution(public void testBeforeJoinPoint())")
     public void before() {
-        System.out.println("This is before advice");
+        System.out.println("Advised: Before testBeforeJoinPoint");
     }
 
     @AfterThrowing("execution(boolean testAfterThrowingJoinPoint(..))")
     public void afterThrowing() {
-        System.out.println("This is afterThrowing advice");
+        System.out.println("Advised: After Throwing testAfterThrowingJoinPoint()");
     }
 
-    @After("execution(public * testAfterJoinPoint(*))")
+    @AfterReturning("execution(public * testAfterJoinPoint(*))")
     public void after() {
-        System.out.println("This is after advice");
+        System.out.println("Advised: After Returning testAfterJoinPoint()");
     }
 
     @Around("execution(public String testAroundJoinPoint(*))")
     public void around(ProceedingJoinPoint pjp) throws Throwable {
         pjp.proceed();
-        System.out.println("This is around advice");
+        System.out.println("Advised: Around testAroundJoinPoint()");
     }
 
 }

@@ -1,7 +1,5 @@
 package com.revature.aop;
 
-import com.revature.aop.AdvisedClass;
-import com.revature.aop.BeanConfig;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

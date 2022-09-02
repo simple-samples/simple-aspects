@@ -1,7 +1,5 @@
 package com.revature.aop;
 
-import com.revature.aop.AdvisedClass;
-import com.revature.aop.AspectClass;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -16,7 +14,7 @@ public class BeanConfig {
     }
 
     @Bean
-    public AspectClass aspectClass() {
-        return new AspectClass();
+    public AdviceClass aspectClass() {
+        return new AdviceClass();
     }
 }
