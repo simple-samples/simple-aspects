@@ -1,13 +1,18 @@
+package com.revature.aop;
+
+import com.revature.aop.AdvisedClass;
+import com.revature.aop.AspectClass;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @Configuration
 @EnableAspectJAutoProxy
-public class AppConfig {
+public class BeanConfig {
+
     @Bean
-    public TestClass testClass() {
-        return new TestClass();
+    public AdvisedClass advisedClass() {
+        return new AdvisedClass();
     }
 
     @Bean
